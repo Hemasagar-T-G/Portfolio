@@ -1,94 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HEMASAGAR T G</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<style>
-    body {
-        background-image: url("background.jpg");
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-    }
-    .navbar {
-        background-color: #3333337e;
-        color: #fff;
-        padding: 10px 20px;
-    }
-    .navbar-brand {
-        font-size: 24px;
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-    .navbar-links {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    .navbar-links li {
-        margin-right: 20px;
-    }
-    .navbar-links li a {
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-    }
-    .btn {
-        padding: 10px 20px;
-        background-color: #008baa;
-        border: none;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 50px;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEMASAGAR T G</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* Custom Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  background-image: url('background.jpg');
+  background-size: cover; /* Optional: Cover the entire background */
+  background-position: center; /* Optional: Center the background image */
+}
 
-    .main-cont {
-        padding: 50px;
-        margin-top: 40px;
-        background-color: #ffffff7e;
-        border-radius: 25px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        text-align: justify;
-    }
 
-    .main-cont:hover {
-        transform: scale(1.05);
-    }
+.navbar {
+  background-color: #12202f !important;
+}
 
-    /* Footer Styles */
-    .footer {
-        background-color: #00783c9f;
-        color: #fff;
-        margin-top: 40px;
-        text-align: center;
-        padding: 10px 0;
-        width: 100%;
-        bottom: 0;
-    }
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
 
-    .footer-text {
-        margin: 0;
-    }
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
 
-    /* Icon Styles */
-    .icon {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-</style>
+.jumbotron {
+  background-image: url('SVG-background.gif');
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Required for absolute positioning */
+  color: #000;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.jumbotron::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.jumbotron-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background: #7fdbff;
+}
+	
+.abt-p {
+  text-align: justify;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 1000;
+	background: -webkit-linear-gradient(#0074d9, #7fdbff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    background: linear-gradient(to right, #0074d9, #7fdbff);
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent; /* For Safari */
+}
+
+h5{
+	font-weight: 550;
+}
+
+.slills .btn{
+	margin: 2px auto;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  /* Styles for tablets and smaller devices */
+  .jumbotron {
+    padding: 80px 0;
+  }
+  h1{
+	font-size: 30px;
+	font-weight: 1000;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Styles for mobile devices */
+  .jumbotron {
+    padding: 60px 0;
+  }
+  h1{
+	font-size: 30px;
+	font-weight: 1000;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="bi bi-code-slash"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project">Project</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+		  <li class="nav-item">
+			<button type="button" class="btn btn-outline-info" onclick="downloadResume()">Resume</button>
+		  </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="jumbotron-content">
+      <h1>HEMASAGAR T G</h1>
+      <p>"Software Engineer" | "Full Stack Developer" | "Application Developer"</p>
+    </div>
+  </div>
+
+  <div class="container" id="about">
+    <h2>About Me</h2>
+    <p class="abt-p">I'm Hemasagar T G, a skilled software engineer with experience as a full-time employee at Tata Consultancy Services and an intern at Acelucid Technologies. Proficient in C++, Java, Python, and web development technologies, I'm a quick learner, innovative thinker, and team player. Holding a Master's in Computer Applications, I'm poised to contribute effectively to software development projects.</p>
+  </div>
+
+  <div class="container" id="experience">
+    <h2>Experience</h2>
+    <div>
+      <h3>TATA CONSULTANCY SERVICES (07/2021 – 07/2022)</h3>
+      <p>Role: Graduate Trainee</p>
+    </div>
+    <div>
+      <h3>ACELUCID TECHNOLOGIES (02/2024 – Present)</h3>
+      <p>Role: Software Engineer</p>
+    </div>
+  </div>
+  
+  <div class="container" id="skills">
+    <h2>Skills</h2>
+    <div class="slills">
+      <h3><i class="bi bi-arrow-right"></i> Languages</h3>
+      <p><button type="button" class="btn btn-outline-info">C++</button>
+	  <button type="button" class="btn btn-outline-info">C#</button>
+	  <button type="button" class="btn btn-outline-info">Dot Net</button>
+	  <button type="button" class="btn btn-outline-info">Asp Dot Net</button>
+	  <button type="button" class="btn btn-outline-info">Java</button>
+	  <button type="button" class="btn btn-outline-info">Python</button>
+	  <button type="button" class="btn btn-outline-info">SQL</button>
+	  <button type="button" class="btn btn-outline-info">PLSQL</button>
+	  <button type="button" class="btn btn-outline-info">JavaScript</button>
+	  <button type="button" class="btn btn-outline-info">HTML</button>
+	  <button type="button" class="btn btn-outline-info">CSS</button>
+	  <button type="button" class="btn btn-outline-info">PHP</button>
+	  <button type="button" class="btn btn-outline-info">ReactJS</button>
+	  <button type="button" class="btn btn-outline-info">ExpressJS</button>
+	  <button type="button" class="btn btn-outline-info">NodeJS</button>
+	  <button type="button" class="btn btn-outline-info">AngularJS</button>
+	  <button type="button" class="btn btn-outline-info">MongoDB</button>
+	  <button type="button" class="btn btn-outline-info">MERN</button></p>
+    </div>
+	
+	<div class="slills">
+      <h3><i class="bi bi-arrow-right"></i> SDLC Models</h3>
+      <p><button type="button" class="btn btn-success">Waterfall</button>
+	  <button type="button" class="btn btn-success">Agile</button>
+	  <button type="button" class="btn btn-success">Spiral</button>
+	  <button type="button" class="btn btn-success">RAD</button>
+	  <button type="button" class="btn btn-success">UML Diagrams</button>
+    </div>
+	
+	<div class="slills">
+      <h3><i class="bi bi-arrow-right"></i> Cloud</h3>
+      <p><button type="button" class="btn btn-info">Amazon Web Services</button>
+	  <button type="button" class="btn btn-info">Azure</button>
+    </div>
+	
+	<div class="slills">
+      <h3><i class="bi bi-arrow-right"></i> Tools</h3>
+      <p><button type="button" class="btn btn-primary">Android Studio</button>
+	  <button type="button" class="btn btn-primary">Visual Studio</button>
+	  <button type="button" class="btn btn-primary">VS Code</button>
+	  <button type="button" class="btn btn-primary">MySQL Workbench</button>
+	  <button type="button" class="btn btn-primary">MS Office</button>
+	  <button type="button" class="btn btn-primary">Eclipse</button>
+	  <button type="button" class="btn btn-primary">PyCharm</button>
+    </div>
+	
+	<div class="slills">
+      <h3><i class="bi bi-arrow-right"></i> Tsting Tools & Version Control System</h3>
+      <p><button type="button" class="btn btn-outline-warning">Selenium</button>
+	  <button type="button" class="btn btn-outline-warning">Git & GitHub</button>
+    </div>
+  </div>
+
+
+  <div class="container" id="project">
+    <h2>Project</h2>
+    <div class="card-deck">
+      <div class="card">
+        <img src="project.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-check-circle"></i> QUIZ BOUT</h5>
+          <p class="card-text">An android quiz application built using java in android studio.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-check-circle"></i> IT ASSET MANAGEMENT SYSTEM</h5>
+          <p class="card-text">A Web application built using HTML, CSS, JS, PHP, & MYSQL to manage IT assets like laptop, mouse, etc.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="project.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-check-circle"></i> HANDY MAN - A HOME RENOVATION SYSTEM</h5>
+          <p class="card-text">A Web application built using HTML, CSS, JS, PHP, & MYSQL to illustrate the home renovation system.</p>
+        </div>
+      </div>
+	  <div class="card">
+        <img src="project.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-check-circle"></i> DIGI NOTES</h5>
+          <p class="card-text">A windows application built using C# and MySQL using Visual Studio for the BCA students which includes the pdf notes for all semesters digital notes in pdf format.</p>
+        </div>
+      </div>
+	  <div class="card">
+        <img src="project.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-check-circle"></i> BANKING SYSTEM</h5>
+          <p class="card-text">A Web application built using HTML, CSS, JS, PHP, & MYSQL to illustrate the transactions done in the banks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact Me</h2>
+    <div>
+    <p>Email: hemasagartg@gmail.com</p>
+    <p>Phone: +91 9353219313</p>
+    <p>Location: Vidyanagara, Tumakuru, Karnataka - 572101</p>
+	<p>LinkedIn: <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237">https://www.linkedin.com/in/hemasagar-t-g-50a269237</a></p>
+	<center><p><a href="https://github.com/Hemasagar-T-G"><i class="bi bi-github"></i></a> &nbsp;&nbsp;
+	<a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237"><i class="bi bi-linkedin"></i></a> &nbsp;&nbsp;
+	<a href="https://www.instagram.com/nanu_hemasagar_t_g?igsh=MXBzcnE0cHNwbnR0OA=="><i class="bi bi-instagram"></i></a></p></center>
+  </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
     function downloadResume() {
         // Replace 'path_to_resume.pdf' with the actual path to your resume PDF file
-        var resumeUrl = 'HEMASAGAR T G+RESUME+TCS+2024.pdf';
+        var resumeUrl = 'HEMASAGAR T G RESUME 2024 - Updated.pdf';
         var a = document.createElement('a');
         a.href = resumeUrl;
         a.download = 'Hemasagar_T_G_Resume.pdf'; // You can specify the filename here
@@ -97,86 +312,6 @@
         document.body.removeChild(a);
     }
     </script>
-</head>
-<body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a href="#" class="navbar-brand">HEMASAGAR T G</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-links navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-            <a href="#" class="btn" onclick="downloadResume()">Resume</a>
-        </div>
-    </div>
-</nav>
-
-<div class="container">
-    <div class="main-cont" id="about">
-        <i class="icon fas fa-user"></i>
-            <h2 class="section-title">About</h2>
-            <p>Name: Hemasagar T G</p>
-            <p>Location: Vidyanagara, Tumakuru, Karnataka - 572101</p>
-            <p>Email: hemasagartg@gmail.com</p>
-            <p>Phone: +918183827838</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237">https://www.linkedin.com/in/hemasagar-t-g-50a269237</a></p>
-            <p>Objective: To secure a challenging position where I can leverage my expertise in programming languages/technologies to create high-quality software solutions, contribute to team success, and enhance my skills in an innovative and collaborative environment.</p>
-    </div>
-
-    <div class="main-cont" id="experience">
-        <i class="icon fas fa-briefcase"></i>
-        <h2 class="section-title">Experience</h2>
-        <h3>TATA CONSULTANCY SERVICES (07/2021 – 07/2022)</h3>
-        <p>Role: Graduate Trainee</p>
-        <h3>ACELUCID TECHNOLOGIES (02/2024 – Present)</h3>
-        <p>Role: Software Engineer</p>
-    </div>
-
-    <div class="main-cont" id="skills">
-        <i class="icon fas fa-code"></i>
-        <h2 class="section-title">Skills</h2>
-        <p>Languages: C++, C#, Dot Net, Asp Dot Net, Java, Python, SQL, PLSQL, JavaScript, HTML, CSS, PHP, ReactJS, ExpressJS, NodeJS, MongoDB, MERN.</p>
-        <p>SDLC Models: Waterfall, Agile, Spiral, RAD, UML Diagrams.</p>
-        <p>Cloud: Amazon Web Services, Azure.</p>
-        <p>Tools: Android Studio, Visual Studio, MySQL Workbench, MS Office, Eclipse, PyCharm.</p>
-        <p>Testing Tools: Selenium.</p>
-    </div>
-
-    <div class="main-cont" id="projects">
-        <i class="icon fas fa-project-diagram"></i>
-        <h2 class="section-title">Projects</h2>
-        <ul>
-            <li>QUIZ BOUT (2023): An android quiz application built using java in android studio.</li>
-            <li>IT ASSET MANAGEMENT SYSTEM (2023): A Web application built using HTML, CSS, JS, PHP, & MYSQL to manage IT assets like laptop, mouse, etc.</li>
-            <li>HANDY MAN - A HOME RENOVATION SYSTEM. (2023): A Web application built using HTML, CSS, JS, PHP, & MYSQL to illustrate the home renovation system.</li>
-            <li>DIGI NOTES (2021): A windows application built using C# and MySQL using Visual Studio for the BCA students which includes the pdf notes for all semesters digital notes in pdf format.</li>
-            <li>BANKING SYSTEM (2020): A Web application built using HTML, CSS, JS, PHP, & MYSQL to illustrate the transactions done in the banks.</li>
-        </ul>
-    </div>
-
-    <div class="main-cont" id="contact">
-        <i class="icon fas fa-envelope"></i>
-        <h2 class="section-title">Contact</h2>
-        <p>Name: Hemasagar T G</p>
-        <p>Location: Vidyanagara, Tumakuru, Karnataka - 572101</p>
-        <p>Email: hemasagartg@gmail.com</p>
-        <p>Phone: +918183827838</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237">https://www.linkedin.com/in/hemasagar-t-g-50a269237</a></p>
-    </div>
-
-    <!-- Footer section -->
-    <footer class="footer">
-        <p class="footer-text">&copy; 2024 Hemasagar T G</p>
-    </footer>
-</div>
 </body>
 </html>
