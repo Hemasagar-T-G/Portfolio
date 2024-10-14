@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEMASAGAR T G | PORTFOLIO</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("em6sxS66R6aE0YkTX");
+    })();
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .navbar {
+      background-color: #12202f !important;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+    }
+
+    .jumbotron {
+      background-image: url('SVG-background.gif');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: #000;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 0;
+      height: 90vh;
+    }
+
+    .jumbotron::before {
+      content: "";
+      background: rgba(255, 255, 255, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .jumbotron-content {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .abt-p {
+      text-align: justify;
+      color: #282828;
+      font-weight: 500;
+      font-size: 17px !important;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 1000;
+      background: -webkit-linear-gradient(#0074d9, #7fdbff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+      background: linear-gradient(to right, #0074d9, #7fdbff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h5 {
+      font-weight: 550;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
+      .jumbotron {
+        padding: 80px 0;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      .jumbotron {
+        padding: 60px 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .achievement-card {
+      flex: 1 0 45%;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 4px 8px rgb(202, 209, 201);
+      transition: transform 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      background-color: rgb(228, 241, 255);
+    }
+
+    .achievement-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .achievement-content i {
+      font-size: 2rem;
+      color: #007bff;
+      margin-right: 15px;
+    }
+
+    .achievement-content p {
+      margin: 0;
+      font-size: 1rem;
+      color: #495057;
+    }
+
+    @media (max-width: 768px) {
+      .achievement-card {
+        flex: 1 0 100%;
+      }
+
+      .achievement-content p {
+        font-size: 0.95rem;
+      }
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #343a40;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .skill-category {
+      flex: 1 0 45%;
+      padding: 20px;
+      margin: 0 auto;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 4px 8px rgb(202, 209, 201);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-category:hover {
+      background-color: rgb(228, 241, 255);
+    }
+
+    .skill-category h4 {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-category i {
+      font-size: 1.8rem;
+      margin-right: 10px;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skill-list li {
+      font-size: 1.1rem;
+      color: #495057;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .skill-category {
+        flex: 1 0 100%;
+      }
+
+      .skill-category h4 {
+        font-size: 1.3rem;
+      }
+
+      .skill-list li {
+        font-size: 1rem;
+      }
+    }
+
+    .experience-item {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 0px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgb(202, 209, 201);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .experience-item:hover {
+      background-color: rgb(228, 241, 255);
+    }
+
+    .experience-item h3 {
+      font-size: 1.8rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .experience-item h4 {
+      font-size: 1.2rem;
+      color: #6c757d;
+      margin-bottom: 15px;
+    }
+
+    .experience-details {
+      padding-left: 20px;
+    }
+
+    .experience-details li {
+      font-size: 1.1rem;
+      color: #495057;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .experience-item h3 {
+        font-size: 1.5rem;
+      }
+
+      .experience-item h4 {
+        font-size: 1rem;
+      }
+
+      .experience-details li {
+        font-size: 1rem;
+      }
+    }
+
+    #contact {
+      margin-top: 50px;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+      color: #343a40;
+    }
+
+    .social-icons a {
+      color: #6c757d;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    @media (max-width: 576px) {
+
+      .contact-info,
+      .form {
+        text-align: center;
+      }
+
+      .btn-primary {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .table td {
+        white-space: normal;
+        word-break: break-word;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">HEMASAGAR T G</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work-experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#technical-skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-outline-info" onclick="downloadResume()">Resume</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="jumbotron">
+    <div class="jumbotron-content">
+      <h1 class="my-4">HEMASAGAR T G</h1>
+      <p class="text-center abt-p my-4"><strong>"Software Engineer" | "Full Stack Developer" | "Application Developer"</strong></p>
+      <button class="btn btn-outline-dark my-4 rounded-pill py-2" onclick="downloadResume()"><i class="bi bi-file-earmark-pdf"></i>
+        <strong>View My Resume</strong></button>
+      <!-- Social Media Links -->
+      <div class="social-icons text-center my-4">
+        <a href="https://github.com/Hemasagar-T-G" class="" target="_blank">
+          <i class="bi bi-github fs-2 btn btn-success" style="color: #fff;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237" class="" target="_blank">
+          <i class="bi bi-linkedin fs-2 btn btn-info" style="color: #fff;"></i>
+        </a>
+        <a href="https://www.instagram.com/nanu_hemasagar_t_g?igsh=MXBzcnE0cHNwbnR0OA==" target="_blank">
+          <i class="bi bi-instagram fs-2 btn btn-danger" style="color: #fff;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="about">
+    <h2 class="section-title my-3">About Me</h2>
+    <p class="abt-p">I'm Hemasagar T G, Full Stack Developer with over 3 years of experience in designing, developing,
+      and deploying web applications using MERN, MEAN, Java, and .NET stacks. Proficient in building RESTful APIs,
+      implementing responsive front-end designs with React.js and Angular, and optimizing backend performance using Dot
+      Net and Spring Boot. Strong expertise in database management, best design practices, and data structures and
+      algorithms. Adept at working in Agile environments and delivering high-quality solutions.</p>
+  </div>
+
+  <div class="container" id="work-experience">
+    <h2 class="section-title my-3">Work Experience</h2>
+    <div class="experience-item">
+      <h3><strong>Tata Consultancy Services (TCS)</strong></h3>
+      <h4><strong>Graduate Trainee | Jul 2021 – Jul 2022</strong></h4>
+      <ul class="experience-details">
+        <li class="abt-p">Facilitated technical assistance by diagnosing and resolving software issues, ensuring
+          seamless client
+          operations.</li>
+        <li class="abt-p">Played a key role in addressing technical challenges, enhancing client satisfaction and system
+          reliability.
+        </li>
+        <li class="abt-p">Acquired valuable experience in system maintenance and troubleshooting complex issues
+          effectively.</li>
+        <li class="abt-p">Delivered exceptional customer service while thriving in a dynamic and fast-paced environment.
+        </li>
+        <li class="abt-p">Collaborated with cross-functional teams to streamline processes, driving overall service
+          efficiency.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <h3><strong>Freelance Full Stack Developer</strong></h3>
+      <h4><strong>Aug 2022 – Jan 2024</strong></h4>
+      <ul class="experience-details">
+        <li class="abt-p">Developed and maintained web applications using HTML, CSS, Bootstrap, JavaScript, PHP, MySQL,
+          and Java for
+          various clients.</li>
+        <li class="abt-p">Implemented responsive designs and ensured seamless integration of front-end and back-end
+          systems.</li>
+        <li class="abt-p">Collaborated with clients to gather requirements and deliver tailored software solutions.</li>
+        <li class="abt-p">Optimized application performance through code refactoring and best practices in software
+          development.</li>
+        <li class="abt-p">Conducted testing and debugging to ensure high-quality deliverables and user satisfaction.
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience-item mb-0">
+      <h3><strong>Acelucid Technologies Private Limited</strong></h3>
+      <h4>Software Engineer 1 | Feb 2024 – Present</h4>
+      <ul class="experience-details">
+        <li class="abt-p">Led the development of the 'LISTEN' project, architecting dynamic web applications using the
+          Angular, .NET,
+          and MongoDB stack to ensure seamless front-end and back-end integration.</li>
+        <li class="abt-p">Designed and implemented secure APIs for the 'LISTEN' project, facilitating efficient data
+          exchange between
+          client-side applications and server-side services, enhancing overall security and reliability.</li>
+        <li class="abt-p">Refactored and optimized code for improved application performance, maintainability, and
+          scalability,
+          ensuring high-quality deliverables throughout the project lifecycle.</li>
+        <li class="abt-p">Contributed to Agile development methodologies as a team lead, collaborating with
+          cross-functional teams to
+          refine project requirements and enhance system functionalities for the 'LISTEN' initiative.</li>
+        <li class="abt-p">Conducted code reviews and provided mentorship to junior developers, fostering a culture of
+          continuous
+          improvement and adherence to best practices within the team.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container" id="technical-skills">
+    <h2 class="section-title my-3">Technical Skills</h2>
+    <div class="row mx-1">
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-code-slash"></i> Programming Languages</h4>
+        <ul class="skill-list">
+          <li class="abt-p">Java</li>
+          <li class="abt-p">C++</li>
+          <li class="abt-p">C#</li>
+          <li class="abt-p">Python</li>
+          <li class="abt-p">JavaScript</li>
+          <li class="abt-p">TypeScript</li>
+          <li class="abt-p">PHP</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-laptop"></i> Web Development</h4>
+        <ul class="skill-list">
+          <li class="abt-p">HTML, CSS</li>
+          <li class="abt-p">ReactJS</li>
+          <li class="abt-p">Angular</li>
+          <li class="abt-p">NodeJS</li>
+          <li class="abt-p">Express</li>
+          <li class="abt-p">.NET, ASP.NET</li>
+          <li class="abt-p">Spring Boot</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-database"></i> Database Management</h4>
+        <ul class="skill-list">
+          <li class="abt-p">SQL</li>
+          <li class="abt-p">MongoDB</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-layers"></i> APIs</h4>
+        <ul class="skill-list">
+          <li class="abt-p">REST API</li>
+          <li class="abt-p">Web API</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-puzzle"></i> Frameworks & Libraries</h4>
+        <ul class="skill-list">
+          <li class="abt-p">MERN, MEAN</li>
+          <li class="abt-p">Express</li>
+          <li class="abt-p">Spring Boot</li>
+          <li class="abt-p">.NET</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-diagram-3"></i> Software Development</h4>
+        <ul class="skill-list">
+          <li class="abt-p">Data Structures and Algorithms</li>
+          <li class="abt-p">Software Design Patterns</li>
+          <li class="abt-p">SOLID Principles</li>
+          <li class="abt-p">MVC Architecture</li>
+          <li class="abt-p">Onion Architecture</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-tools"></i> Tools & Platforms</h4>
+        <ul class="skill-list">
+          <li class="abt-p">Git, GitHub</li>
+          <li class="abt-p">AWS</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-4 col-sm-12 skill-category">
+        <h4><i class="bi bi-check2-circle"></i> Other Skills</h4>
+        <ul class="skill-list">
+          <li class="abt-p">Agile Methodology</li>
+          <li class="abt-p">Unit Testing</li>
+          <li class="abt-p">Version Control</li>
+          <li class="abt-p">Responsive Design</li>
+          <li class="abt-p">Code Standards</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="project">
+    <h2 class="section-title my-3">Projects</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="abt-p"><strong>LISTEN (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Company Name:</strong> Acelucid Technologies Private Limited<br>
+              <strong>Project Objective:</strong> The LISTEN project promotes sustainability through the integration of
+              solar energy solutions, EV infrastructure, AgriTech innovations, and heat pump technologies, emphasizing
+              environmental responsibility and efficient use of renewable resources.<br>
+              <strong>Technologies Used:</strong><br>
+              - Design: Figma<br>
+              - Frontend: HTML, CSS, Bootstrap, Angular<br>
+              - Backend: .NET<br>
+              - Database: MongoDB<br>
+              - Deployment: AWS<br>
+              - Project Management: Trello<br>
+              <strong>Roles and Responsibilities:</strong><br>
+              - Led cross-functional teams, conducted regular scrum meetings.<br>
+              - Managed client meetings and communicated between clients and team.<br>
+              - Project Management using Trello and technical documentation.<br>
+              - Deployed code to AWS.<br>
+              - Monitored project outcomes related to sustainability goals.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>ClinicFlow-WebApi (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> ClinicFlow-WebApi is a RESTful API developed using .NET and MongoDB to manage
+              doctor appointments, patient records, and clinic operations efficiently.<br>
+              <strong>Technologies Used:</strong><br>
+              - .NET Core<br>
+              - MongoDB<br>
+              - Swagger<br>
+              <strong>Features:</strong><br>
+              - Appointment scheduling and management.<br>
+              - Secure patient record handling.<br>
+              - Real-time doctor availability tracking.<br>
+              - Download Token receipt in pdf format.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>MobileRechargeWizard.WebApi (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> MobileRechargeWizard.WebApi is a backend API for managing mobile recharge plans
+              and user data, built with .NET, MongoDB, and supporting features like CRUD operations, plan management,
+              and
+              automatic expiry date calculation based on recharge plans.<br>
+              <strong>Technologies Used:</strong><br>
+              - C#<br>
+              - .NET Core<br>
+              - MongoDB<br>
+              - Swagger<br>
+              <strong>Features:</strong><br>
+              - Create, read, update, and delete (CRUD) operations for recharge plans.<br>
+              - Manage user data associated with mobile numbers.<br>
+              - Automatically calculate expiry dates based on selected recharge plans.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>Cash-Register-Manager (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> Angular application designed to help users calculate change based on the total
+              amount and the amount paid.<br>
+              <strong>Technologies Used:</strong><br>
+              - Angular<br>
+              - Bootstrap<br>
+              - Typescript<br>
+              - HTML/CSS<br>
+              <strong>Features:</strong><br>
+              - Change calculation and denomination display.<br>
+              - Responsive design for all devices.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>To-Do (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> Full-stack MERN To-Do application enabling users to create, read, update, and
+              delete tasks.<br>
+              <strong>Technologies Used:</strong><br>
+              - MERN Stack<br>
+              - MongoDB<br>
+              - Express<br>
+              - React<br>
+              - Node.js<br>
+              <strong>Features:</strong> Streamlined task management and CRUD operations.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>User-Device-Management-API (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> REST API to manage users and their devices, developed with Spring Boot and
+              MongoDB.<br>
+              <strong>Technologies Used:</strong><br>
+              - Spring Boot<br>
+              - MongoDB<br>
+              <strong>Features:</strong> Device management with CRUD operations.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>Techuniverse (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> A web application built using Angular that provides links to all technical
+              skills
+              tutorials.<br>
+              <strong>Technologies Used:</strong><br>
+              - Angular<br>
+              - HTML/CSS
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>Car-Racing (2024)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> This Windows car racing game, developed in C# using Windows Forms, provides an
+              interactive experience where players race cars, leveraging C# for game logic and Windows Forms for the
+              interface.<br>
+              <strong>Technologies Used:</strong><br> - C#<br> - Windows Forms<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>QUIZ_BOUT (2023)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> The Quiz Bout App is an Android-based application designed for students to take
+              quizzes, improve knowledge, and prepare for exams on mobile devices, built using Android Studio and
+              Java.<br>
+              <strong>Technologies Used:</strong><br> - Java<br> - Android Studio<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>IT ASSET MANAGEMENT SYSTEM (2023)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> IT Asset Management System (ITAMS) is a web app that streamlines IT asset
+              tracking, requests, and lifecycle management with features like user authentication, QR code tracking,
+              automated notifications, and report generation.<br>
+              <strong>Technologies Used:</strong><br> - HTML/CSS<br> - JS<br> - PHP<br> - MySQL<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>HANDY MAN - A HOME RENOVATION SYSTEM (2023)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> The Home Renovation Management System streamlines project planning, budgeting,
+              task assignments, and vendor coordination, ensuring efficient, on-time, and within-budget home renovations
+              for homeowners and managers.<br>
+              <strong>Technologies Used:</strong><br> - HTML<br> - CSS<br> - JS<br> - PHP<br> - MySQL<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>DIGI NOTES (2021)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> A Windows application that provides BCA students with digital notes.<br>
+              <strong>Technologies Used:</strong><br> - C#<br> - MySQL<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>BANKING SYSTEM (2020)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> A web application to illustrate bank transactions using HTML, CSS, JS, PHP, and
+              MySQL.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>DREAM-SET (2020)</strong></td>
+            <td class="abt-p">
+              <strong>Overview:</strong> A web application built using HTML, CSS, JS, Bootstrap.<br>
+            </td>
+          </tr>
+          <tr>
+            <td class="abt-p"><strong>GitHub Repository Link</strong></td>
+            <td class="abt-p"> <a
+                href="https://github.com/Hemasagar-T-G?tab=repositories">https://github.com/Hemasagar-T-G?tab=repositories</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <!-- MERN & MEAN Stacks Card -->
+      <div class="col-md-4">
+        <div class="card text-white bg-primary h-100">
+          <div class="card-body">
+            <h5 class="card-title">MERN & MEAN Stacks</h5>
+            <p class="card-text">Developed full-stack applications using MongoDB, Express.js, React.js, and Node.js.
+              Integrated RESTful APIs for data management and used Angular for building dynamic single-page
+              applications.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Java & Spring Boot Card -->
+      <div class="col-md-4">
+        <div class="card text-white bg-success h-100">
+          <div class="card-body">
+            <h5 class="card-title">Java & Spring Boot</h5>
+            <p class="card-text">Built microservices using Java and Spring Boot, implementing REST APIs and ensuring
+              security using OAuth2.0 and JWT.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- C# & .NET Card -->
+      <div class="col-md-4">
+        <div class="card text-white bg-danger h-100">
+          <div class="card-body">
+            <h5 class="card-title">C# & .NET</h5>
+            <p class="card-text">Created scalable web applications with ASP.NET Core, focusing on MVC architecture, Web
+              APIs, and SQL Server integration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database Management Card -->
+      <div class="col-md-4">
+        <div class="card text-white bg-info h-100">
+          <div class="card-body">
+            <h5 class="card-title">Database Management</h5>
+            <p class="card-text">Extensive experience in designing and optimizing databases in SQL and NoSQL
+              environments, including MongoDB and MySQL.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Structures & Algorithms Card -->
+      <div class="col-md-4">
+        <div class="card text-white bg-warning h-100">
+          <div class="card-body">
+            <h5 class="card-title">Data Structures & Algorithms</h5>
+            <p class="card-text">Applied advanced data structures and algorithms to optimize application performance and
+              ensure efficient resource utilization.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms Card -->
+      <div class="col-md-4">
+        <div class="card text-white bg-secondary h-100">
+          <div class="card-body">
+            <h5 class="card-title">Tools & Platforms</h5>
+            <p class="card-text">Proficient in Git, GitHub, and AWS. Familiar with version control and cloud platforms
+              for efficient software deployment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="achievements">
+    <h2 class="section-title my-3">Key Achievements</h2>
+    <div class="row mx-1">
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-graph-up-arrow"></i>
+          <p>Optimized front-end components using Angular, significantly reducing page load time and enhancing
+            performance.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-braces-asterisk"></i>
+          <p>Integrated APIs to improve project functionality, resulting in a 15% increase in user engagement.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-lightbulb"></i>
+          <p>Gained extensive experience in software development best practices and industry standards by contributing
+            to live projects.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-people-fill"></i>
+          <p>Collaborated with cross-functional teams to implement Agile methodologies, boosting project delivery speed
+            and team productivity.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-code-slash"></i>
+          <p>Conducted code reviews, providing constructive feedback to promote a culture of quality and continuous
+            improvement.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-lock-fill"></i>
+          <p>Ensured high performance, responsiveness, and security of applications through robust data protection
+            measures.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-arrow-repeat"></i>
+          <p>Developed reusable, testable, and efficient code, adhering to industry standards.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-star-fill"></i>
+          <p>Mentored junior developers and facilitated knowledge-sharing sessions, contributing to team growth and
+            skill development.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-briefcase"></i>
+          <p>Collaborated with product managers and stakeholders to align technical solutions with business objectives,
+            ensuring seamless product delivery.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-12 col-sm-12 achievement-card">
+        <div class="achievement-content">
+          <i class="bi bi-speedometer2"></i>
+          <p>Proactively identified and resolved performance bottlenecks, improving overall system stability and user
+            experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="contact">
+    <h2 class="text-center">Contact Me</h2>
+
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-md-6">
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:hemasagartg@gmail.com">hemasagartg@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919353219313">+91 9353219313</a></p>
+          <p><strong>Location:</strong> Vidyanagara, Tumakuru, Karnataka - 572101</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237"
+              target="_blank">linkedin.com/in/hemasagar-t-g</a></p>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="col-md-6 mb-3">
+        <h3 class="text-center">Send a Message</h3>
+        <form id="contact-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="4"
+              placeholder="Your message here"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-icons text-center my-4">
+      <a href="https://github.com/Hemasagar-T-G" class="" target="_blank">
+        <i class="bi bi-github fs-2 btn btn-success" style="color: #fff;"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237" class="" target="_blank">
+        <i class="bi bi-linkedin fs-2 btn btn-info" style="color: #fff;"></i>
+      </a>
+      <a href="https://www.instagram.com/nanu_hemasagar_t_g?igsh=MXBzcnE0cHNwbnR0OA==" target="_blank">
+        <i class="bi bi-instagram fs-2 btn btn-danger" style="color: #fff;"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function downloadResume() {
+      var resumeUrl = 'HEMASAGAR T G-RESUME.pdf';
+      var a = document.createElement('a');
+      a.href = resumeUrl;
+      a.download = 'HEMASAGAR T G-RESUME.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      emailjs.send("service_v1z9cgm", "template_lqxg9o4", {
+        "from_name": name,
+        "email_id": email,
+        "message": message
+      }).then(function (response) {
+        console.log("Email sent successfully:", response);
+        alert("Your message has been sent successfully!");
+        document.getElementById('contact-form').reset();
+      }, function (error) {
+        console.error("Email sending failed:", error);
+        alert("Oops! Something went wrong. Please try again later.");
+      });
+    });
+  </script>
+
+</body>
+
+</html>
