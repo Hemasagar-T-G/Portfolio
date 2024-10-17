@@ -8,14 +8,14 @@ Full Stack Developer with over 3 years of experience in designing, developing, a
 
 ## Experience
 
-- **TATA CONSULTANCY SERVICES (07/2021 – 07/2022)**
-  - Role: Graduate Trainee
+- **ACELUCID TECHNOLOGIES (02/2024 – Present)**
+  - Role: Software Engineer 1
 
 - **Freelance Full Stack Developer (08/2022 – 01/2024)**
   - Role: Web Developer
-  
-- **ACELUCID TECHNOLOGIES (02/2024 – Present)**
-  - Role: Software Engineer 1
+
+- **TATA CONSULTANCY SERVICES (07/2021 – 07/2022)**
+  - Role: Graduate Trainee
 
 ## Skills
 
