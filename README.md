@@ -13,7 +13,7 @@ Full Stack Developer with over 3 years of experience in designing, developing, a
 
 - **Freelance Full Stack Developer (08/2022 – 01/2024)**
   - Role: Web Developer
-  - 
+  
 - **ACELUCID TECHNOLOGIES (02/2024 – Present)**
   - Role: Software Engineer 1
 
