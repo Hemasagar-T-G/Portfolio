@@ -39,7 +39,14 @@ Full Stack Developer with over 3 years of experience in designing, developing, a
 Feel free to connect with me for collaboration or inquiries!
 
 ## Connect with Me
-
-- [GitHub](https://github.com/Hemasagar-T-G)
-- [LinkedIn](https://www.linkedin.com/in/hemasagar-t-g-50a269237)
-- [Instagram](https://www.instagram.com/nanu_hemasagar_t_g?igshid=MXBzcnE0cHNwbnR0OA==)
+<div id="badges">
+  <a href="https://github.com/Hemasagar-T-G">
+    <img src="https://img.shields.io/badge/Github-white?style=for-the-badge&logo=Github&logoColor=black" alt="Github Badge"/>
+  </a>
+   <a href="https://www.linkedin.com/in/hemasagar-t-g-50a269237">
+    <img src="https://img.shields.io/badge/Linkedin-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+   <a href="https://www.instagram.com/nanu_hemasagar_t_g">
+    <img src="https://img.shields.io/badge/Instagram-purple?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
+  </a>
+</div>
